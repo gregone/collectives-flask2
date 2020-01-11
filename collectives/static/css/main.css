@@ -2,7 +2,7 @@
 body{
 	margin: 0;
 	background-color: white;
-	font-family: Arial, sans-serif;
+	font-family: "Montserrat", "Avenir", sans-serif;
 }
 
 a{
@@ -60,7 +60,6 @@ a:hover{
 	border-radius: 20px 0 0 20px;
 
 	font-size: 1em;
-	font-family: 'Nunito Sans', sans-serif;
 }
 /* Mobile Adjustment : smaller motto*/
 @media only screen and (max-width:1000px) {
@@ -231,7 +230,6 @@ a:hover{
 	float:	right;
 	text-align: right;
 	margin: 0;
-	font-family: 'Nunito Sans', sans-serif;
 	vertical-align: middle;
 	line-height: 60px;
 	font-size: 40px;
