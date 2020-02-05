@@ -5,6 +5,7 @@ sqlalchemy-utils
 passlib
 flask-wtf
 WTForms-Alchemy
+flask-assets
 flask_uploads
 flask-migrate
 flask-marshmallow
@@ -15,6 +16,7 @@ quill-delta[html]
 pylint
 pylint-quotes
 pylint-flask-sqlalchemy
+pyscss
 autopep8
 pytest
 pysimplesoap

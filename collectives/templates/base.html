@@ -1,8 +1,11 @@
 <!DOCTYPE html><html>
 <head>
     <title>Collectives {% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='caf/icon/activity.css') }}">
+    {% assets "scss_all" %}
+        <link rel=stylesheet type=text/css href="{{ ASSET_URL }}">
+    {% endassets %}
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='caf/icon/activity.css') }}"> -->
     <link rel="icon" href="{{ url_for('static', filename=conf['FAVICON']) }}" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <script type="text/javascript">function getServerLocalTime(){ return '{{server_local_time()}}'; }</script>

@@ -1,6 +1,8 @@
 from flask import Flask
 from flask_login import LoginManager
 from flask_migrate import Migrate
+from flask_assets import Environment, Bundle
+
 
 from . import models, views, auth, api, administration, event 
 from . import context_processor
@@ -25,7 +27,20 @@ def create_app(config_filename='config'):
     app.context_processor(context_processor.helpers_processor)
     migrate = Migrate(app, models.db)
 
+    
+
     with app.app_context():
+        # Initialize asset compilation
+        assets = Environment(app)
+        scss = Bundle(
+            'css/main.scss',
+            'css/administration.scss',
+            'caf/icon/activity.css',
+            'css/event/edit.scss',
+            'css/event/event.scss',
+            filters='pyscss',
+            output='all.css')
+        assets.register('scss_all', scss)
 
         # Register blueprints
         app.register_blueprint(views.root)
@@ -33,6 +48,7 @@ def create_app(config_filename='config'):
         app.register_blueprint(administration.blueprint)
         app.register_blueprint(auth.blueprint)
         app.register_blueprint(event.blueprint)
+
         #print(app.url_map)
 
         forms.configure_forms(app)
