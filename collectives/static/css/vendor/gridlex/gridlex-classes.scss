@@ -140,22 +140,29 @@
     order: 1;
   }
 }
+
 //************************
 //    GRID BY NUMBER
-//*************************/
+//*************************
+
+
+
 @include makeGridByNumber(#{$gl-gridName});
+
 @each $mq-key, $mq-value in $gl-mq-list {
   @include bp(#{$mq-key}) {
-  
+
     @include makeGridByNumber(_#{$mq-key});
   }
 }
 
-/************************
-    COLS SIZES
-*************************/
+//************************
+//    COLS SIZES
+//************************
+
 @include makeCol(#{$gl-colName});
-@include makeOff(off);
+
+@include makeOff(#{$off});
 
 
 @each $mq-key, $mq-value in $gl-mq-list {
@@ -168,9 +175,10 @@
 
 
 
-/************************
-    HIDING COLS
-*************************/
+// ************************
+//   HIDING COLS
+// *************************
+
 @each $mq-key, $mq-value in $gl-mq-list {
   @include bp(#{$mq-key}) {
     [#{$gl-attributeName}*="#{$mq-key}-hidden"] {

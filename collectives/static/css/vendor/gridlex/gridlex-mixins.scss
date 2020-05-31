@@ -1,4 +1,9 @@
 $i: 0;
+$mq-key: '';
+$off: 0;
+$breakpoint: '';
+$col: '';
+$gl-colName: '';
 
 // Make the breakpoints
 @mixin bp($breakpoint) {

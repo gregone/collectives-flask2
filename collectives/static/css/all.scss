@@ -3,9 +3,11 @@
 @import 'base/index';
 @import 'layout/index';
 @import "/vendor/gridlex/index";
-
+@import 'components/index';
+@import 'utilities/index';
 
 // Legacy css (to be cleaned up progressively) 
+
 @import 'legacy/main';
 @import 'legacy/profile';
 @import 'legacy/administration';
