@@ -1,4 +1,5 @@
 
+@import 'variables/index';
 
 
 // Legacy css (to be cleaned up progressively) 
@@ -6,4 +7,4 @@
 @import "legacy/profile";
 @import "legacy/administration";
 @import "legacy/activity";
-@import "legacy/event/_index";
+@import "legacy/event/index";
